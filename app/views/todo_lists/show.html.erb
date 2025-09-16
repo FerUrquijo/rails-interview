@@ -1,0 +1,14 @@
+<%= turbo_stream_from @todo_list %>
+
+<h1 class="content-title"><%= @todo_list.name %></h1>
+
+<%= button_to "Complete All",
+  update_all_todo_list_path(@todo_list),
+  method: :patch,
+  data: { turbo_stream: true },
+  class: "btn-complete-all"
+%>
+
+<div id="todo-items">
+  <%= render partial: "todo_items/todo_item", collection: @todo_list.todo_items, as: :todo_item %>
+</div>

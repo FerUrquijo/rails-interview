@@ -1,0 +1,1 @@
+json.(todo_item, :id, :title, :description, :status, :todo_list_id, :created_at)

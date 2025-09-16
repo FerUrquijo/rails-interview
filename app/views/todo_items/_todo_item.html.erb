@@ -1,0 +1,7 @@
+<turbo-frame id="<%= dom_id(todo_item) %>">
+  <div class="content-card <%= todo_item.status %>">
+    <h2 class="content-card-title"><%= todo_item.title %></h2>
+    <p class="content-card-description"><%= todo_item.description %></p>
+    <span class="content-card-status"><%= todo_item.status %></span>
+  </div>
+</turbo-frame>

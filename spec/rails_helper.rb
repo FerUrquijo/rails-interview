@@ -60,4 +60,17 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  config.include FactoryBot::Syntax::Methods
+
 end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
+
+Dir[Rails.root.join('spec', 'factories', '**', '*.rb')].each { |f| require f }
+Dir[Rails.root.join('spec', 'shared', '**', '*.rb')].each { |f| require f }
+

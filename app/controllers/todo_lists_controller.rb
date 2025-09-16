@@ -12,4 +12,16 @@ class TodoListsController < ApplicationController
 
     respond_to :html
   end
+
+  def show
+    @todo_list = TodoList.find(params[:id])
+    
+    respond_to :html
+  end
+
+  def update_all
+    CompleteAll.call(todo_list_id: params[:id])
+  
+    head :ok 
+  end
 end

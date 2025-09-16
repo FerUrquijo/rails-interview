@@ -1,0 +1,50 @@
+.content-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.content-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  width: 200px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.content-card:hover {
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+}
+
+.content-card-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.content-card-description {
+  margin-bottom: 8px;
+}
+
+.content-card-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.content-card.pending .content-card-status {
+  background-color: #f0ad4e;
+}
+
+.content-card.completed .content-card-status {
+  background-color: #5cb85c;
+}
